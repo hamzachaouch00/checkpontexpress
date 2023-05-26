@@ -14,7 +14,7 @@ const hour= new Date().getHours()
 const day= new Date().getDay()
 
 app.get("/home",(req,res)=>{
-    if((day >=1 && day<=6 )&&(hour >=9 && hour <=22)){
+    if((day >=1 && day<=6 )&&(hour >=9 && hour <=17)){
         res.sendFile(path.join(__dirname,"Home.html"))
     }else{
         res.send('app closed')
